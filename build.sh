@@ -1,2 +1,2 @@
 
-uglifyjs lazy.js -m >lazy.min.js
+uglifyjs l9zy.js -m >l9zy.min.js
