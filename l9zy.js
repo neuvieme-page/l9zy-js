@@ -1,12 +1,12 @@
-//
-// Just call lzay.init();
+// l9zy - 92 #izi morray
+// Just call l9zy.init();
 // args ratioElementInViewPort (0 - 1)
 //
 // lazy script for async loading of images
 // need requestAnimationFrame Polyfill for old browser support
 //
 
-var lazy = (function() {
+var l9zy = (function() {
 
  	"use strict";
 
