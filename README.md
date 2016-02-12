@@ -1,8 +1,8 @@
-lazy.js
+l9zy.js
 =====================
 
 ##credits
-@neuviemepage
+@neuviemepage neuviempage.com
 
 ## To do
 - add classList polyfill
