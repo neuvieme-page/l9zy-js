@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="L9zy js" />
+        <meta name="author" content="Luddo"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>
+            L9zy js
+        </title>
+        <style>
+        html {
+          overflow: overflow: hidden;
+        }
+            * {
+            margin: 0; padding: 0;
+            }
+            *,
+            *::before,
+            *::after {
+            box-sizing: border-box;
+            }
+            .lazy {
+            min-height: 100vh;
+            position: relative;
+            width: 100%;
+            }
+            .lazy img {
+              opacity: 0;
+              visibility: hidden;
+              transition: all 500ms ease-out;
+            }
+            .loaded img {
+              opacity: 1;
+              visibility: visible;
+            }
+            .spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+               -moz-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                 -o-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            -webkit-animation: spin 0.75s infinite linear;
+                    animation: spin 0.75s infinite linear;
+            transition : all 250ms ease-out;
+            }
+            .spinner::before,
+            .spinner::after {
+            left: -2px;
+            top: -2px;
+            display: none;
+            position: absolute;
+            content: '';
+            width: inherit;
+            height: inherit;
+            border: inherit;
+            border-radius: inherit;
+            }
+            .loaded .spinner {
+              opacity: 0;
+              visibility: hidden;
+            }
+            .spinner {
+            border-top-color: transparent;
+            }
+            .spinner::after {
+            display: block;
+            border-color: transparent;
+            border-top-color: #000;
+            -webkit-animation: spin 1.25s infinite linear reverse;
+                    animation: spin 1.25s infinite linear reverse;
+            }
+            @-webkit-keyframes spin {
+            from {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+            }
+            to {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg);
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="lazy" data-src="http://cdn.pcwallart.com/images/doge-shiba-wallpaper-4.jpg">
+            </div>
+            <div class="lazy" data-src="http://wallpaperhdbase.com/wp-content/gallery/shiba-inu-puppy-pictures/1282876744_1024x768_shiba-inu-dog.jpg">
+            </div>
+            <div class="lazy" data-src="http://fr.academic.ru/pictures/frwiki/83/Shiba_Inu.jpg">
+            </div>
+            <div class="lazy" data-src="http://cdn.pcwallart.com/images/doge-shiba-wallpaper-4.jpg">
+            </div>
+            <div class="lazy" data-src="http://cdn.pcwallart.com/images/doge-shiba-wallpaper-4.jpg">
+            </div>
+        </div>
+        <script src="l9zy.js">
+        </script>
+        <script>
+            l9zy.init();
+        </script>
+    </body>
+</html>
